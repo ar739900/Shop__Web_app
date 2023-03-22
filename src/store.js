@@ -8,9 +8,7 @@ import { ref, computed } from 'vue';
 export const useStore = defineStore('cart', () => {
     const cart = ref([]);
     const addtoCart = (product) => {
-        console.log(product);
         cart.value.push(product)
-        console.log(cart.value);
     }
     const cartTotal = computed(() => cart.value.reduce((total, product) => {
         return Number(total) + Number(product.price);

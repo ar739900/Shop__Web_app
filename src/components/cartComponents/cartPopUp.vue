@@ -5,6 +5,7 @@
                 <q-card-section>
                     <div id="cart_items">
                         <h4>Added items</h4>
+                        {{ store.cartTotal }}
                     </div>
                     <q-space />
                     <div id="cart_products">

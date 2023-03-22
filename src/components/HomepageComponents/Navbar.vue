@@ -5,7 +5,21 @@
                 <div id="lhs">Home</div>
             </router-link>
             <div id="rhs">
-                <div id="Account">Account</div>
+                <router-link to="/account">
+                    <div id="account">
+                        Account
+                    </div>
+                </router-link>
+                <div @click="login = !login" id="login">
+                    <q-icon name="login" />
+                    <loginPopup :loginVisibility="login" />
+                </div>
+                <div>
+                    <router-link to="/signup">
+                        Signup
+                        <q-icon name="signup" />
+                    </router-link>
+                </div>
                 <div @click="dialog = !dialog" id="Cart">
                     <q-icon name="shopping_cart" />
                     <div id="cart_count">{{ storeCart.cartCount }}</div>
@@ -19,8 +33,10 @@
 <script setup>
 import { ref } from 'vue'
 import { useStore } from '../../store.js'
+import loginPopup from '../accountComponents/loginPopup.vue';
 import cartCard from '../cartComponents/cartPopUp.vue'
 const dialog = ref(false);
+const login = ref(false);
 const storeCart = useStore();
 
 </script>

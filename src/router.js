@@ -1,7 +1,9 @@
 import Home from "./Views/Home.vue";
-import Admin from './Views/Admin.vue';
+import merchant from './Views/Admin.vue';
 import product from './Views/productDetails.vue';
 import order from './Views/orders.vue';
+import signup from './Views/signup.vue';
+import account from './Views/account.vue'
 import { createRouter, createWebHistory } from "vue-router";
 
 // 2. Define some routes
@@ -21,8 +23,16 @@ const routes = [
         component: order
     },
     {
-        path: '/admin',
-        component: Admin
+        path: '/signup',
+        component: signup
+    },
+    {
+        path: '/account',
+        component: account
+    },
+    {
+        path: '/merchant',
+        component: merchant
     },
 ];
 
