@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h4>Your Account Info.</h4>
+    <div class="flex item-center justify-center h-screen">
+      amit
     </div>
 </template>
 

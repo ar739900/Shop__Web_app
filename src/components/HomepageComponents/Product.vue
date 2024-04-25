@@ -1,13 +1,13 @@
 <template>
-    <div id="products">
-        <!-- <button @click="increment()">increment</button> -->
-        <!-- <h2>{{ count }}</h2> -->
-        <div @click="click(product.id)" v-for="product in products" :key="product" id="individual_product">
-            <img :src="product.imageUrl" alt="img">
-            <p>{{ product.title }}</p>
-            <p>Price:${{ product.price }}</p>
-        </div>
+  <div class="flex text-20">
+    <!-- <button @click="increment()">increment</button> -->
+    <!-- <h2>{{ count }}</h2> -->
+    <div @click="click(product.id)" v-for="product in products" :key="product" id="individual_product">
+      <img :src="product.imageUrl" alt="img">
+      <p>{{ product.title }}</p>
+      <p>Price:${{ product.price }}</p>
     </div>
+  </div>
 </template>
 
 <script setup>
